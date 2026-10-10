@@ -50,43 +50,55 @@
 // Console.WriteLine($"25 / 4 как int: {studentsPerGroupWrong}");
 // Console.WriteLine($"25 / 4 как double: {studentsPerGroupCorrect}");
 
+// Console.WriteLine();
+// Console.WriteLine("Способы собрать строку");
+
+// string firstName = "Софья";
+// string lastName = "Егорова";
+
+// // Способ Конкатенации через "+"
+// string fullNameConcat = firstName + " " + lastName;
+
+// // Способ интерполяции через $""
+// string fullNameInterp = $"{firstName} {lastName}";
+
+// // Метод string.Concat
+// string fullNameConcatMethod = string.Concat(firstName, " ", lastName);
+
+// Console.WriteLine(fullNameConcat);
+// Console.WriteLine(fullNameInterp);
+// Console.WriteLine(fullNameConcatMethod);
+// Console.WriteLine($"Все три строки равны: {fullNameConcat == fullNameInterp && fullNameInterp == fullNameConcatMethod}"); // Проверяет равны ли строковые переменные
+
+// Console.WriteLine();
+// Console.WriteLine("Константы");
+
+// // Сохраняет значение, которое нельзя изменить
+// const double VatRate = 0.20; 
+// const string CollegeName = "Вф ВолГУ";
+
+// double productPrice = 1000;
+// double priceWithVat = productPrice * (1 + VatRate); // Сохраняет и рассчитывает стоимость с учетом НДС
+
+// Console.WriteLine($"Учебное заведение: {CollegeName}");
+// Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
+
+// int scholarship = 1435;
+// int monthlyExpenses = 1100;
+// const int MonthsInSemester = 4;
+
+// Console.WriteLine($"Остаток стипендии к концу месяца: {scholarship - monthlyExpenses}");
+// Console.WriteLine($"Затраты за семестр: {monthlyExpenses * 4}");
+// Console.WriteLine($"Остаток за семестр: {(scholarship - monthlyExpenses) * 4}");
+
 Console.WriteLine();
-Console.WriteLine("Способы собрать строку");
+Console.WriteLine("Целочисленное деление: ловушка 2");
 
-string firstName = "Софья";
-string lastName = "Егорова";
+int totalMinutes = 500;
+int minutesPerLesson = 45;
 
-// Способ Конкатенации через "+"
-string fullNameConcat = firstName + " " + lastName;
+// Высчитываем кол-во полных уроков и остаток минут
+int totalLesson = totalMinutes / minutesPerLesson;
+int minutesRemainder = totalMinutes % minutesPerLesson;
 
-// Способ интерполяции через $""
-string fullNameInterp = $"{firstName} {lastName}";
-
-// Метод string.Concat
-string fullNameConcatMethod = string.Concat(firstName, " ", lastName);
-
-Console.WriteLine(fullNameConcat);
-Console.WriteLine(fullNameInterp);
-Console.WriteLine(fullNameConcatMethod);
-Console.WriteLine($"Все три строки равны: {fullNameConcat == fullNameInterp && fullNameInterp == fullNameConcatMethod}"); // Проверяет равны ли строковые переменные
-
-Console.WriteLine();
-Console.WriteLine("Константы");
-
-// Сохраняет значение, которое нельзя изменить
-const double VatRate = 0.20; 
-const string CollegeName = "Вф ВолГУ";
-
-double productPrice = 1000;
-double priceWithVat = productPrice * (1 + VatRate); // Сохраняет и рассчитывает стоимость с учетом НДС
-
-Console.WriteLine($"Учебное заведение: {CollegeName}");
-Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
-
-int scholarship = 1435;
-int monthlyExpenses = 1100;
-const int MonthsInSemester = 4;
-
-Console.WriteLine($"Остаток стипендии к концу месяца: {scholarship - monthlyExpenses}");
-Console.WriteLine($"Затраты за семестр: {monthlyExpenses * 4}");
-Console.WriteLine($"Остаток за семестр: {(scholarship - monthlyExpenses) * 4}");
+Console.WriteLine($"500 минут = {totalLesson} полных занятий + {minutesRemainder} минут");
